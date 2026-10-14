@@ -24,7 +24,13 @@ Os contêineres WordPress e MySQL não possuem portas publicadas diretamente na 
 Na pasta do projeto, execute:
 
 ```bash
-docker compose up -d
+docker compose up -d --scale wordpress=3
+```
+
+O número de instâncias WordPress pode ser definido a cada execução pelo parâmetro `--scale`. Por exemplo, para iniciar cinco instâncias:
+
+```bash
+docker compose up -d --scale wordpress=5
 ```
 
 Acesse o WordPress em:
